@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أقسام الفيزياء وأنواعها وقوانينها</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .branch-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        
+        .law-box {
+            border-right: 4px solid #3b82f6;
+        }
+        
+        .sub-branch {
+            border-bottom: 2px dashed #e5e7eb;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .branch-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- شريط التنقل -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-atom text-blue-600 text-2xl"></i>
+                <span class="font-bold text-xl text-blue-600">عالم الفيزياء</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#classical" class="hover:text-blue-600 transition">الفيزياء الكلاسيكية</a>
+                <a href="#modern" class="hover:text-blue-600 transition">الفيزياء الحديثة</a>
+                <a href="#applied" class="hover:text-blue-600 transition">الفروع التطبيقية</a>
+                <a href="#laws" class="hover:text-blue-600 transition">القوانين الأساسية</a>
+            </div>
+            <button class="md:hidden text-blue-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- قسم البطل -->
+    <header class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-4 flex flex-col items-center text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">أقسام الفيزياء وأنواعها وقوانينها</h1>
+            <p class="text-xl md:text-2xl max-w-3xl leading-relaxed">
+                رحلة شاملة عبر فروع العلم التي تشرح الكون من أصغر الجسيمات إلى أعظم المجرات
+            </p>
+            <div class="mt-8 flex space-x-4">
+                <a href="#classical" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                    ابدأ الرحلة
+                </a>
+                <a href="#laws" class="border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition">
+                    القوانين الأساسية
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- مقدمة عن الفيزياء -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="الفيزياء" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-blue-600">ما هي الفيزياء؟</h2>
+                    <p class="text-lg mb-4 leading-relaxed">
+                        الفيزياء هي العلم الذي يدرس المادة والطاقة وتفاعلاتهما. تهتم الفيزياء بفهم القوانين الأساسية التي تحكم الكون، من أصغر الجسيمات دون الذرية إلى توسع الكون ككل.
+                    </p>
+                    <p class="text-lg mb-4 leading-relaxed">
+                        تنقسم الفيزياء إلى عدة فروع رئيسية يمكن تصنيفها إلى: الفيزياء الكلاسيكية التي تهتم بالظواهر العيانية، والفيزياء الحديثة التي تدرس الظواهر الذرية ودون الذرية، والفروع التطبيقية التي تستخدم هذه المبادئ في تطبيقات عملية.
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                        <p class="font-semibold text-blue-800">
+                            "الفيزياء ليست مجرد علم، إنها طريقة للتفكير. إنها فلسفة تبحث عن الحقيقة الأساسية للكون." - ريتشارد فاينمان
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفيزياء الكلاسيكية -->
+    <section id="classical" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-600">الفيزياء الكلاسيكية</h2>
+            <p class="text-xl text-center mb-12 max-w-3xl mx-auto">
+                تدرس الظواهر العيانية (المرئية) التي تكون فيها السرعات أقل بكثير من سرعة الضوء والأحجام أكبر بكثير من الذرة.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- الميكانيكا الكلاسيكية -->
+                <div class="branch-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-cogs text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600">الميكانيكا الكلاسيكية</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        تدرس حركة الأجسام تحت تأثير القوى. تشمل:
+                    </p>
+                    <ul class="list-disc pr-5 text-gray-700 mb-4 space-y-2">
+                        <li>ميكانيكا نيوتن (قوانين الحركة)</li>
+                        <li>ميكانيكا لاغرانج وهاملتون</li>
+                        <li>ديناميكا الموائع</li>
+                        <li>الميكانيكا السماوية (حركة الكواكب)</li>
+                    </ul>
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <p class="text-blue-800 font-semibold text-sm">
+                            أهم القوانين: قوانين نيوتن للحركة، قانون الجذب العام، مبدأ حفظ الطاقة
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- الديناميكا الحرارية -->
+                <div class="branch-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-temperature-high text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-red-600">الديناميكا الحرارية</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        تدرس العلاقة بين الحرارة والأشكال الأخرى للطاقة. تشمل:
+                    </p>
+                    <ul class="list-disc pr-5 text-gray-700 mb-4 space-y-2">
+                        <li>دراسة انتقال الحرارة</li>
+                        <li>تحويل الطاقة الحرارية إلى شغل</li>
+                        <li>خواص الأنظمة عند الاتزان الحراري</li>
+                    </ul>
+                    <div class="bg-red-50 p-3 rounded-lg">
+                        <p class="text-red-800 font-semibold text-sm">
+                            أهم القوانين: القوانين الأربعة للديناميكا الحرارية، الإنتروبيا، معادلات الحالة
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- الكهرباء والمغناطيسية -->
+                <div class="branch-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-bolt text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-600">الكهرباء والمغناطيسية</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        تدرس الشحنات الكهربائية والمجالات الكهرومغناطيسية. تشمل:
+                    </p>
+                    <ul class="list-disc pr-5 text-gray-700 mb-4 space-y-2">
+                        <li>الكهرباء الساكنة والتيارية</li>
+                        <li>المغناطيسية والكهرومغناطيسية</li>
+                        <li>الدوائر الكهربائية</li>
+                    </ul>
+                    <div class="bg-green-50 p-3 rounded-lg">
+                        <p class="text-green-800 font-semibold text-sm">
+                            أهم القوانين: معادلات ماكسويل، قانون كولوم، قانون أوم، قانون فاراداي
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- البصريات -->
+                <div class="branch-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-lightbulb text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-600">البصريات</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        تدرس الضوء وخصائصه وتفاعله مع المادة. تشمل:
+                    </p>
+                    <ul class="list-disc pr-5 text-gray-700 mb-4 space-y-2">
+                        <li>البصريات الهندسية (انعكاس، انكسار)</li>
+                        <li>البصريات الفيزيائية (حيود، تداخل)</li>
+                        <li>البصريات الكمية</li>
+                    </ul>
+                    <div class="bg-purple-50 p-3 rounded-lg">
+                        <p class="text-purple-800 font-semibold text-sm">
+                            أهم القوانين: قانون سنيل، معادلات ماكسويل للضوء، نظرية الانبعاث
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- الصوتيات -->
+                <div class="branch-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-volume-up text-yellow-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-yellow-600">الصوتيات</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        تدرس الموجات الصوتية وانتشارها. تشمل:
+                    </p>
+                    <ul class="list-disc pr-5 text-gray-700 mb-4 space-y-2">
+                        <li>انتشار الصوت في مختلف الأوساط</li>
+                        <li>الرنين والاهتزازات</li>
+                        <li>تطبيقات طبية وصناعية</li>
+                    </ul>
+                    <div class="bg-yellow-50 p-3 rounded-lg">
+                        <p class="text-yellow-800 font-semibold text-sm">
+                            أهم القوانين: معادلة الموجة، تأثير دوبلر، خصائص الاهتزازات
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- الميكانيكا السماوية -->
+                <div class="branch-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-moon text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-indigo-600">الميكانيكا السماوية</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        تدرس حركة الأجرام السماوية. تشمل:
+                    </p>
+                    <ul class="list-disc pr-5 text-gray-700 mb-4 space-y-2">
+                        <li>حركة الكواكب والأقمار</li>
+                        <li>ميكانيكا المدارات</li>
+                        <li>ديناميكا المجموعات النجمية</li>
+                    </ul>
+                    <div class="bg-indigo-50 p-3 rounded-lg">
+                        <p class="text-indigo-800 font-semibold text-sm">
+                            أهم القوانين: قوانين كبلر، قانون الجذب العام، معادلات الحركة الكوكبية
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفيزياء الحديثة -->
+    <section id="modern" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-600">الفيزياء الحديثة</h2>
+            <p class="text-xl text-center mb-12 max-w-3xl mx-auto">
+                تدرس الظواهر التي تحدث عند سرعات قريبة من سرعة الضوء أو على مستويات ذرية ودون ذرية.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- ميكانيكا الكم -->
+                <div class="branch-card bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-600">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-atom text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-600">ميكانيكا الكم</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        تدرس سلوك المادة والطاقة على المستوى الذري ودون الذري. تشمل:
+                    </p>
+                    <ul class="list-disc pr-5 text-gray-700 mb-4 space-y-2">
+                        <li>الازدواجية موجة-جسيم</li>
+                        <li>مبدأ عدم اليقين لهايزنبرج</li>
+                        <li>الطاقة الكمية</li>
+                        <li>التشابك الكمي</li>
+                    </ul>
+                    <div class="bg-purple-50 p-3 rounded-lg">
+                        <p class="text-purple-800 font-semibold text-sm">
+                            أهم القوانين: معادلة شرودنغر، مبدأ باولي للاستبعاد، نظرية المجال الكمي
+                        </p>
+                    </div>
+                    
+                    <div class="mt-6 sub-branch">
+                        <h4 class="font-bold text-lg mb-3 text-gray-800">فروع ميكانيكا الكم:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <p class="font-semibold text-purple-700">الكيمياء الكمية</p>
+                                <p class="text-gray-600 text-sm">تطبيق ميكانيكا الكم على التفاعلات الكيميائية</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <p class="font-semibold text-purple-700">بصريات الكم</p>
+                                <p class="text-gray-600 text-sm">دراسة الضوء كفوتونات وتفاعله مع المادة</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <p class="font-semibold text-purple-700">فيزياء الحالة الصلبة</p>
+                                <p class="text-gray-600 text-sm">خصائص المواد الصلبة على المستوى الكمي</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <p class="font-semibold text-purple-700">الحوسبة الكمية</p>
+                                <p class="text-gray-600 text-sm">استخدام الخصائص الكمية في معالجة المعلومات</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- النسبية -->
+                <div class="branch-card bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-600">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-clock text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600">النظرية النسبية</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        تدرس الفضاء والزمان والجاذبية عند السرعات العالية أو في حقول جاذبية قوية. تشمل:
+                    </p>
+                    <ul class="list-disc pr-5 text-gray-700 mb-4 space-y-2">
+                        <li>النسبية الخاصة (السرعة القريبة من الضوء)</li>
+                        <li>النسبية العامة (الجاذبية وانحناء الزمكان)</li>
+                        <li>علم الكون الفيزيائي</li>
+                    </ul>
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <p class="text-blue-800 font-semibold text-sm">
+                            أهم القوانين: تحويلات لورنتز، معادلات أينشتاين للمجال، تكافؤ الكتلة والطاقة (E=mc²)
+                        </p>
+                    </div>
+                    
+                    <div class="mt-6 sub-branch">
+                        <h4 class="font-bold text-lg mb-3 text-gray-800">فروع النظرية النسبية:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <p class="font-semibold text-blue-700">نسبية خاصة</p>
+                                <p class="text-gray-600 text-sm">تدرس الزمان والمكان عند السرعات العالية</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <p class="font-semibold text-blue-700">نسبية عامة</p>
+                                <p class="text-gray-600 text-sm">تفسر الجاذبية كانحناء في الزمكان</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <p class="font-semibold text-blue-700">علم الكون النسبي</p>
+                                <p class="text-gray-600 text-sm">تطبيق النسبية على دراسة الكون</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <p class="font-semibold text-blue-700">فيزياء الثقوب السوداء</p>
+                                <p class="text-gray-600 text-sm">دراسة الأجسام ذات الجاذ
+</html>
+
